@@ -3,6 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import 'amfe-flexible'
+import './assets/scss/base.css'
+import './assets/scss/iconfont.css'
+
 Vue.config.productionTip = false
 
 new Vue({
