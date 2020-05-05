@@ -1,16 +1,17 @@
 <template>
-  <def-layout>
+  <layout-tabbar>
     Cart
-  </def-layout>
+  </layout-tabbar>
 </template>
 
 <script>
-import defLayout from '../../layout/default'
+import LayoutTabbar from '../../layout/Tabbar'
 export default {
-  components: { defLayout },
+  components: { LayoutTabbar },
   data () {
     return {}
-  }
+  },
+  created () { this.$api.getToken() }
 }
 </script>
 

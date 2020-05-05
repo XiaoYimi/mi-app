@@ -1,29 +1,14 @@
-import Home from '../../views/tabbar/Home.vue'
-
 export default [
+  // 根路由重定向
   {
     path: '/',
     name: 'Home',
-    component: Home
+    redirect: '/tabbar/home'
   },
+  // 手机注册|登录
   {
-    path: '/classify',
-    name: 'Classify',
-    component: () => import('../../views/tabbar/Classify.vue')
-  },
-  {
-    path: '/cart',
-    name: 'Cart',
-    component: () => import('../../views/tabbar/Cart.vue')
-  },
-  {
-    path: '/me',
-    name: 'Me',
-    component: () => import('../../views/tabbar/Me.vue')
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../../views/About.vue')
+    path: '/signup',
+    name: 'Signup',
+    component: () => import('@/views/Signup.vue')
   }
 ]

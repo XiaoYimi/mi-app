@@ -43,7 +43,7 @@ export default {
     }
   },
   created () {
-    const routes = ['Home', 'Classify', 'Cart', 'Me']
+    const routes = ['Tabbar-Home', 'Tabbar-Classify', 'Tabbar-Cart', 'Tabbar-Me']
     if (!this.$route.params.tabIndex) {
       routes.map((item, index) => {
         if (this.$route.name === item) {
@@ -56,12 +56,9 @@ export default {
   },
   methods: {
     routerTo (tabIndex) {
-      const routes = ['Home', 'Classify', 'Cart', 'Me']
+      const routes = ['Tabbar-Home', 'Tabbar-Classify', 'Tabbar-Cart', 'Tabbar-Me']
       this.$router.push({
-        name: routes[tabIndex],
-        params: {
-          tabIndex: tabIndex
-        }
+        name: routes[tabIndex]
       })
     }
   }

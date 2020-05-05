@@ -1,15 +1,15 @@
 <template>
-  <def-layout :index="1">
+  <layout-tabbar>
     <i class="iconfont">&#xe6a0;</i>
-  </def-layout>
+  </layout-tabbar>
 </template>
 
 <script>
-import defLayout from '../../layout/default'
+import LayoutTabbar from '../../layout/Tabbar'
 export default {
   name: 'Home',
   components: {
-    defLayout
+    LayoutTabbar
   }
 }
 </script>

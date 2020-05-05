@@ -1,14 +1,14 @@
 <template>
-  <def-layout>
+  <layout-tabbar>
     classify
-  </def-layout>
+  </layout-tabbar>
 </template>
 
 <script>
-import defLayout from '../../layout/default'
+import LayoutTabbar from '../../layout/Tabbar'
 export default {
   components: {
-    defLayout
+    LayoutTabbar
   },
   data () {
     return {}
