@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-// 测试
-import tabbarRoutes from './modules/tabbar'
 import commonRoutes from './modules/common'
+import tabbarRoutes from './modules/tabbar'
+import profileRoutes from './modules/profile'
 
 Vue.use(VueRouter)
 
 const routes = [
+  ...commonRoutes,
   ...tabbarRoutes,
-  ...commonRoutes
+  ...profileRoutes
 ]
 
 const router = new VueRouter({

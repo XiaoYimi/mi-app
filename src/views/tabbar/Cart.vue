@@ -7,6 +7,7 @@
 <script>
 import LayoutTabbar from '../../layout/Tabbar'
 export default {
+  name: 'Tabbar-Cart',
   components: { LayoutTabbar },
   data () {
     return {}

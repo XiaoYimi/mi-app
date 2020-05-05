@@ -7,7 +7,7 @@
 <script>
 import LayoutTabbar from '../../layout/Tabbar'
 export default {
-  name: 'Home',
+  name: 'Tabbar-Home',
   components: {
     LayoutTabbar
   }
