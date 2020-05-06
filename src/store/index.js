@@ -7,7 +7,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    loginState: true,
+    loginState: true, // 默认 false
+    secretState: false, // 默认 false
     user: {
       avatar: 'https://dss1.baidu.com/70cFfyinKgQFm2e88IuM_a/forum/pic/item/3c6d55fbb2fb431619c5f9ad2da4462308f7d30b.jpg',
       motto: 'xiaoyimi',
@@ -17,10 +18,16 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-
+    open_loginstate (state) { state.loginState = true },
+    open_secretstate (state) { state.secretState = true },
+    close_loginstate (state) { state.loginState = false },
+    close_secretstate (state) { state.secretState = false }
   },
   actions: {
-
+    exec_open_loginstate ({ commit }) { commit('open_loginstate') },
+    exec_open_secretstate ({ commit }) { commit('open_secretstate') },
+    exec_close_loginstate ({ commit }) { commit('close_loginstate') },
+    exec_close_secretstate ({ commit }) { commit('close_secretstate') }
   },
   modules: {
     address: addressStore

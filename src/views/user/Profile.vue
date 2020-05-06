@@ -5,13 +5,13 @@
   >
 
     <section class="baseinfo mt-20">
-      <div @click="routerTo('/profile/avatar')" class="item">
+      <div @click="routerTo('Profile-Avatar-Edit')" class="item">
         <span class="item-left">头像</span>
         <span class="item-right">
           <img src="../../assets/image/def_user_icon.jpg" alt="u_cion" class="item-icon"/>
         </span>
       </div>
-      <div @click="routerTo('/profile/motto')" class="item">
+      <div @click="routerTo('Profile-Motto-Edit')" class="item">
         <span class="item-left">姓名</span>
         <span class="item-right">
           xiaoyimi
@@ -34,19 +34,19 @@
     </section>
 
     <section class="otherinfo mt-20">
-      <div @click="routerTo('/profile/password')" class="item">
+      <div @click="routerTo('Profile-Password-Edit')" class="item">
         <span class="item-left">修改密码</span>
         <span class="item-right"><i class="iconfont color-secondgray">&#xe604;</i></span>
       </div>
-      <div @click="routerTo('/profile/address')" class="item">
+      <div @click="routerTo('Profile-Address')" class="item">
         <span class="item-left">收货地址</span>
         <span class="item-right"><i class="iconfont color-secondgray">&#xe604;</i></span>
       </div>
-      <div @click="routerTo('/profile/secret')" class="item">
-        <span class="item-left">密保手机</span>
+      <div @click="routerTo('Profile-Secret')" class="item">
+        <span class="item-left">账户安全</span>
         <span class="item-right"><i class="iconfont color-secondgray">&#xe604;</i></span>
       </div>
-      <div @click="routerTo('/profile/userbind')" class="item">
+      <div @click="routerTo('Profile-Userbind-Signin')" class="item">
         <span class="item-left">第三方账户</span>
         <span class="item-right"><i class="iconfont color-secondgray">&#xe604;</i></span>
       </div>
@@ -81,10 +81,8 @@ export default {
   },
   methods: {
     routerLeft () { this.$router.go(-1) },
-    routerTo (route) { this.$router.push({ path: route }) },
+    routerTo (routeName) { this.$router.push({ name: routeName }) },
     onSelect (item) {
-      // 默认情况下点击选项时不会自动收起
-      // 可以通过 close-on-click-action 属性开启自动收起
       this.show = false
       console.log(item)
     }

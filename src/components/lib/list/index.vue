@@ -37,8 +37,19 @@ export default {
     }
   },
   methods: {
-    routerTo (route) {
-      this.$router.push({ path: route })
+    routerTo (routeName) {
+      const routes = [
+        'Profile-Secret-Account',
+        'Profile-Secret-Email',
+        'Profile-Secret-Phone',
+        'Profile-Secret-Problem'
+      ]
+      const bool = routes.some(item => item === routeName)
+      if (bool && !this.$store.state.secretState) {
+        this.$router.push({ name: 'Profile-Phone-Input' })
+      } else {
+        this.$router.push({ name: routeName })
+      }
     }
   }
 }
